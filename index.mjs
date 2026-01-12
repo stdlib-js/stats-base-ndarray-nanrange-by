@@ -1,0 +1,4 @@
+// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import s from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel-dimension@v0.3.2-esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-stride@v0.2.2-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-data-buffer@v0.2.2-esm/index.mjs";import r from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-offset@v0.2.2-esm/index.mjs";import{ndarray as n}from"https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-nanrange-by@esm/index.mjs";function d(d,i,m){var a=d[0];return n(s(a,0),e(a),t(a,0),r(a),(function(s,t){return i.call(m,s,t,a)}),null)}export{d as default};
+//# sourceMappingURL=index.mjs.map
