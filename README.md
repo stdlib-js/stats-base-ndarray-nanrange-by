@@ -43,14 +43,32 @@ The [**range**][range] is defined as the difference between the maximum and mini
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-ndarray-nanrange-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanrange-by@esm/index.mjs';
+var nanrangeBy = require( '@stdlib/stats-base-ndarray-nanrange-by' );
 ```
 
 #### nanrangeBy( arrays, clbk\[, thisArg ] )
@@ -58,7 +76,7 @@ import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray
 Computes the [range][range] of a one-dimensional ndarray via a callback function, ignoring `NaN` values.
 
 ```javascript
-import vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-ctor@esm/index.mjs';
+var vector = require( '@stdlib/ndarray-vector-ctor' );
 
 function clbk( value ) {
     return value * 2.0;
@@ -85,7 +103,7 @@ The invoked callback is provided three arguments:
 To set the callback execution context, provide a `thisArg`.
 
 ```javascript
-import vector from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-vector-ctor@esm/index.mjs';
+var vector = require( '@stdlib/ndarray-vector-ctor' );
 
 function clbk( value ) {
     this.count += 1;
@@ -127,18 +145,13 @@ var count = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@esm/index.mjs';
-import fillBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-fill-by@esm/index.mjs';
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import nanrangeBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanrange-by@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var fillBy = require( '@stdlib/ndarray-fill-by' );
+var zeros = require( '@stdlib/ndarray-zeros' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var nanrangeBy = require( '@stdlib/stats-base-ndarray-nanrange-by' );
 
 var opts = {
     'dtype': 'generic'
@@ -160,10 +173,6 @@ console.log( ndarray2array( x ) );
 
 var v = nanrangeBy( [ x ], clbk );
 console.log( v );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -187,7 +196,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
